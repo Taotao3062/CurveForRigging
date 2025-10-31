@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: mouth.ma
-//Last modified: Fri, Oct 31, 2025 12:13:45 PM
+//Last modified: Fri, Oct 31, 2025 02:48:26 PM
 //Codeset: 874
 requires maya "2026";
 requires "mtoa" "5.5.2";
@@ -10,17 +10,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202505131231-aff5f20443";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "4384E591-4895-0F1C-4E26-049F19822C18";
+fileInfo "UUID" "8D4CD120-4994-ABFF-56DB-42B4C4E48200";
 createNode transform -s -n "persp";
 	rename -uid "C16EF30F-4435-BF48-125A-A4915955FE5F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.282437299066526 4.4008797687406505 22.027410652325969 ;
-	setAttr ".r" -type "double3" -11.138352729608647 3.7999999999962819 4.9805666234318967e-17 ;
+	setAttr ".t" -type "double3" 9.2036371810876929 2.6962440817654594 10.385217774307247 ;
+	setAttr ".r" -type "double3" -9.3383527296104898 42.999999999994721 5.4360746968629875e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "91C6431A-4C49-AD62-C847-F19807E0C096";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 21.547170397587024;
+	setAttr ".coi" 13.222810215269327;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -75,7 +75,9 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "nurbsCircle1";
+createNode transform -n "group1";
+	rename -uid "B598D741-435D-26F2-96AE-3FAC18D14273";
+createNode transform -n "nurbsCircle1" -p "group1";
 	rename -uid "744BAD5B-4183-815F-0B4A-1EA75F30737B";
 	setAttr ".rp" -type "double3" 0 0.49593626326438867 0 ;
 	setAttr ".sp" -type "double3" 0 0.49593626326438867 0 ;
@@ -84,11 +86,11 @@ createNode nurbsCurve -n "nurbsCircleShape1" -p "nurbsCircle1";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
 	setAttr -s 11 ".cp[0:10]" -type "double3" -1.6978251544091596 -0.45795663106300299 
-		2.7764900169243487e-16 0 -2.8310046283894823 4.318413606889624e-16 1.6978251544091596 
+		2.7764900169243487e-16 0 -2.8310046283894823 4.3184136068896245e-16 1.6978251544091596 
 		-0.45795663106300211 2.7764900169243492e-16 0 0 0 0 1.8365215465210314 -1.4485517989062143e-16 
 		0 2.7663122823156199 -4.3184136068896255e-16 0 1.8365215465210314 -1.4485517989062146e-16 
 		0 0 0 0 0 0 0 0 0 0 0 0;
-createNode transform -n "nurbsCircle2";
+createNode transform -n "nurbsCircle2" -p "group1";
 	rename -uid "65D6C481-438B-920D-9DB0-F6927DBA6BE9";
 	setAttr ".rp" -type "double3" 0 -0.11044786401808637 0 ;
 	setAttr ".sp" -type "double3" 0 -0.11044786401808637 0 ;
@@ -98,11 +100,11 @@ createNode nurbsCurve -n "nurbsCircleShape2" -p "nurbsCircle2";
 	setAttr ".tw" yes;
 	setAttr -s 11 ".cp[0:10]" -type "double3" 0 -2.4905767175070381 1.4485517989062171e-16 
 		0 -3.632037361987031 5.2400281386737483e-16 0 -2.4905767175070377 1.4485517989062175e-16 
-		0.33245825832952036 0.15133299043722953 7.322818693850856e-33 0.15672232595085278 
+		0.33245825832952036 0.15133299043722953 7.3228186938508547e-33 0.15672232595085278 
 		0.91889923066553747 -1.4485517989062143e-16 2.2201714076988745e-17 1.1028293506494506 
 		-1.4485517989062136e-16 -0.15672232595085278 0.91889923066553703 -1.4485517989062146e-16 
 		-0.33245825832952036 0.1513329904372297 7.3228186938508492e-33 0 0 0 0 0 0 0 0 0;
-createNode transform -n "nurbsCircle3";
+createNode transform -n "nurbsCircle3" -p "group1";
 	rename -uid "B4ADEB6D-40A0-A47C-38CC-548AD456676D";
 	setAttr ".rp" -type "double3" -3.643 0 0 ;
 	setAttr ".sp" -type "double3" -3.643 0 0 ;
@@ -113,7 +115,7 @@ createNode nurbsCurve -n "nurbsCircleShape3" -p "nurbsCircle3";
 	setAttr -s 11 ".cp[0:10]" -type "double3" -0.39390691807841227 0 0 
 		0 0 0 0 0 0 -0.82359877673626958 0 0 0 0 0 0 0 0 -0.39390691807841227 0 0 -0.71848623491603103 
 		0 0 0 0 0 0 0 0 0 0 0;
-createNode transform -n "nurbsCircle4";
+createNode transform -n "nurbsCircle4" -p "group1";
 	rename -uid "019E53A0-4137-9B5F-3300-4DA79A282FDF";
 	setAttr ".rp" -type "double3" 3.6429092750590994 0 -2.4651903288156619e-32 ;
 	setAttr ".sp" -type "double3" 3.6429092750590994 0 -2.4651903288156619e-32 ;
@@ -137,20 +139,20 @@ createNode nurbsCurve -n "nurbsCircleShape4" -p "nurbsCircle4";
 		4.4265208999503241 0.78361162489122438 -2.4651903288156619e-32
 		;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "575F4F5B-4627-E2EA-A630-8FBB24A3EB42";
+	rename -uid "427EB7CB-4F9C-057A-07E1-D982BA423E03";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "595CC0C2-4F37-188E-40C1-DB9C52129FC8";
+	rename -uid "5B80B1C0-42FA-1F7C-44F5-12BC23E628FE";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "A54E65C5-44EF-89AD-4E8A-8393F74F1B5F";
+	rename -uid "6969C45C-4FE3-7852-92D1-7EAE8EBB8AF9";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "A01B0DA8-4272-6CB9-D226-86852F67962E";
+	rename -uid "17F0F47C-4EBE-65A9-E8D8-C28BF48E1B30";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "28F00B0D-40BE-76C2-F411-8199F21579B0";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "5358244B-4FBE-E73B-40C1-19B018671C07";
+	rename -uid "044C9713-4BFA-87CB-92DE-16B4C567AAAE";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "02FFABAE-4632-BFC6-6081-EDBDA49B22A8";
 	setAttr ".g" yes;

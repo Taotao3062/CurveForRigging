@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: finger.ma
-//Last modified: Fri, Oct 31, 2025 02:49:01 PM
+//Name: eyes.ma
+//Last modified: Fri, Oct 31, 2025 02:48:52 PM
 //Codeset: 874
 requires maya "2026";
 requires "mtoa" "5.5.2";
@@ -10,28 +10,28 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202505131231-aff5f20443";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "49A04381-4199-3DD5-2CC8-ABB0E46AF308";
+fileInfo "UUID" "6295C8BD-4A15-D1A4-0EFE-679F27E64B14";
 createNode transform -s -n "persp";
-	rename -uid "F9E0DC8F-46FD-66E0-0DBC-DEA50230600F";
+	rename -uid "54CE0B3E-4FED-F431-DB28-58B704EB69BC";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.6092592872976397 5.0029851304762794 12.650227764865308 ;
-	setAttr ".r" -type "double3" -20.738352729616459 7.7999999999999874 0 ;
+	setAttr ".t" -type "double3" 13.64981844841237 3.7066596642302594 14.719061047870216 ;
+	setAttr ".r" -type "double3" -12.938352729602716 30.200000000000024 1.3800101574784851e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
-	rename -uid "058CABE3-457F-424C-5F35-F1AA11CE2A9E";
+	rename -uid "329C880A-4CD8-3A59-D9E9-FCB96C7BB858";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 13.454880258226968;
+	setAttr ".coi" 21.547170397588225;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
-	rename -uid "B71909EB-46D4-4495-B44A-66B5645A8073";
+	rename -uid "4DF7EBB6-4F12-1757-7C05-6F9B151C72B4";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 1000.1 0 ;
 	setAttr ".r" -type "double3" -90 0 0 ;
 createNode camera -s -n "topShape" -p "top";
-	rename -uid "16EA9019-4529-A406-E526-DE88C9C0A5DC";
+	rename -uid "07362D50-4FD1-58C5-0829-95898B096694";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
@@ -43,11 +43,11 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "front";
-	rename -uid "7B74245C-4BAD-1B52-4111-1284BA2F087C";
+	rename -uid "AD97411E-46FA-2821-0DAF-5780B5EE730A";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 0 1000.1 ;
 createNode camera -s -n "frontShape" -p "front";
-	rename -uid "6AE95FE2-4475-1C8C-8E43-79BFA279CF4D";
+	rename -uid "1CF12477-4BA3-03D2-62A6-598CE50C61D0";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
@@ -59,12 +59,12 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "side";
-	rename -uid "761CEBBE-4735-470B-104F-36AA7694D64B";
+	rename -uid "CB1BED0D-43B6-BF5F-5388-8BADC30C7835";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 1000.1 0 0 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
-	rename -uid "27B97EB0-4395-850D-AE24-3F92EBA59445";
+	rename -uid "2C153E74-442B-EE9A-CB4B-588F4C9D3F62";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
@@ -76,148 +76,94 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "group1";
-	rename -uid "46DE8C64-4D61-D533-9DDE-F19643290065";
-createNode transform -n "nurbsCircle5" -p "group1";
-	rename -uid "981DA766-43D2-3AD4-8FCB-5DB76E0659E6";
-	setAttr ".rp" -type "double3" 0 0 -1.9195483521026284 ;
-	setAttr ".sp" -type "double3" 0 0 -1.9195483521026284 ;
-createNode nurbsCurve -n "nurbsCircleShape5" -p "nurbsCircle5";
-	rename -uid "5D74879F-499C-F782-6D5E-B39A9DCCD30B";
+	rename -uid "0B8A9805-4F80-A876-D6F8-7282745FE070";
+createNode transform -n "nurbsCircle1" -p "group1";
+	rename -uid "F9CF180B-40B0-1094-FD69-08B5F58DD961";
+	setAttr ".rp" -type "double3" 2 0 0 ;
+	setAttr ".sp" -type "double3" 2 0 0 ;
+createNode nurbsCurve -n "nurbsCircleShape1" -p "nurbsCircle1";
+	rename -uid "F56444E0-4C0D-9AC4-2158-358A425560F1";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
-		2.1600592497687624e-17 0.35276444625057279 -2.2723127983532012
-		1.8705163891647551e-33 0.49888426421059456 -1.9195483521026284
-		-2.1600592497687624e-17 0.35276444625057274 -1.5667839058520556
-		-3.0547850865524365e-17 2.5862248353036572e-17 -1.4206640878920336
-		-2.1600592497687624e-17 -0.35276444625057274 -1.5667839058520556
-		-3.0599991138314225e-33 -0.49888426421059484 -1.9195483521026284
-		2.1600592497687624e-17 -0.35276444625057274 -2.2723127983532012
-		3.0547850865524365e-17 -6.8032670965426704e-17 -2.4184326163132233
-		2.1600592497687624e-17 0.35276444625057279 -2.2723127983532012
-		1.8705163891647551e-33 0.49888426421059456 -1.9195483521026284
-		-2.1600592497687624e-17 0.35276444625057274 -1.5667839058520556
+		2.7836116248912246 0.7836116248912246 0
+		2 1.1081941875543877 0
+		1.2163883751087754 0.78361162489122438 0
+		0.89180581244561186 5.7448982375248304e-17 0
+		1.2163883751087754 -0.78361162489122449 0
+		2 -1.1081941875543884 0
+		2.7836116248912246 -0.78361162489122438 0
+		3.1081941875543881 -1.511240500779959e-16 0
+		2.7836116248912246 0.7836116248912246 0
+		2 1.1081941875543877 0
+		1.2163883751087754 0.78361162489122438 0
+		;
+createNode transform -n "nurbsCircle3" -p "group1";
+	rename -uid "6F822CDA-4DE4-7413-2DF1-63A62CB90A41";
+createNode nurbsCurve -n "nurbsCircleShape3" -p "nurbsCircle3";
+	rename -uid "90AB488E-4AB7-B326-F87D-C4B3761022E2";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		3.1265820115868252 1.6388384423628322 0
+		2.7074826282505618e-16 2.487198983118537 0
+		-3.1265820115868252 1.6388384423628315 0
+		-4.4216546846578426 -0.23880958592593526 0
+		-3.1265820115868252 -2.571645645103414 0
+		-4.4292017387028386e-16 -0.94453099661428297 0
+		3.1265820115868252 -2.5716456451034135 0
+		4.4216546846578426 -0.23880958592593582 0
+		3.1265820115868252 1.6388384423628322 0
+		2.7074826282505618e-16 2.487198983118537 0
+		-3.1265820115868252 1.6388384423628315 0
 		;
 createNode transform -n "nurbsCircle2" -p "group1";
-	rename -uid "C359A2C1-4A96-B419-FA74-FFA4B7D07BA3";
-	setAttr ".rp" -type "double3" 0 0 1.8281088558045315 ;
-	setAttr ".sp" -type "double3" 0 0 1.8281088558045315 ;
+	rename -uid "7C161292-49E8-3C90-8479-3EB08ECFAC6F";
+	setAttr ".rp" -type "double3" -2 0 0 ;
+	setAttr ".sp" -type "double3" -2 0 0 ;
 createNode nurbsCurve -n "nurbsCircleShape2" -p "nurbsCircle2";
-	rename -uid "971B3DD4-41FE-B4C3-0826-9F916C77435F";
-	setAttr -k off ".v";
-	setAttr ".tw" yes;
-createNode transform -n "nurbsCircle4" -p "group1";
-	rename -uid "5AAB923B-4573-E90B-F6BC-458723721584";
-	setAttr ".rp" -type "double3" 0 0 -0.70186649505566712 ;
-	setAttr ".sp" -type "double3" 0 0 -0.70186649505566712 ;
-createNode nurbsCurve -n "nurbsCircleShape4" -p "nurbsCircle4";
-	rename -uid "3E902E08-4D9B-062A-72A9-08A267F1373D";
+	rename -uid "73E82147-471F-FB81-5D92-CB85862F2F11";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
-		2.1600592497687624e-17 0.35276444625057279 -1.0546309413062398
-		1.8705163891647551e-33 0.49888426421059456 -0.70186649505566712
-		-2.1600592497687624e-17 0.35276444625057274 -0.34910204880509438
-		-3.0547850865524365e-17 2.5862248353036572e-17 -0.20298223084507239
-		-2.1600592497687624e-17 -0.35276444625057274 -0.34910204880509438
-		-3.0599991138314225e-33 -0.49888426421059484 -0.70186649505566712
-		2.1600592497687624e-17 -0.35276444625057274 -1.0546309413062398
-		3.0547850865524365e-17 -6.8032670965426704e-17 -1.2007507592662618
-		2.1600592497687624e-17 0.35276444625057279 -1.0546309413062398
-		1.8705163891647551e-33 0.49888426421059456 -0.70186649505566712
-		-2.1600592497687624e-17 0.35276444625057274 -0.34910204880509438
-		;
-createNode transform -n "nurbsCircle1" -p "group1";
-	rename -uid "F79D1C30-420E-5AAC-E9FE-14880455F9A6";
-createNode nurbsCurve -n "nurbsCircleShape1" -p "nurbsCircle1";
-	rename -uid "31C8D137-4177-CE92-E3B3-69994AC54EE2";
-	setAttr -k off ".v";
-	setAttr ".tw" yes;
-	setAttr -s 11 ".cp[0:10]" -type "double3" 0 0.16229128131535242 -1.7573068148687505 
-		0 -0.16229128131535253 -1.1442377408099243e-16 0 0.16229128131535264 1.7573111743593475 
-		0 0 1.4327286117833746 0 -0.1622896584188096 1.7573111743593475 0 0.16228965841880971 
-		1.8718715821860812e-16 0 -0.16228965841880971 -1.7573068148687505 0 0 -1.4327329712739716 
-		0 0 0 0 0 0 0 0 0;
-createNode transform -n "nurbsCircle3" -p "group1";
-	rename -uid "1F4869BD-48AC-BD88-BC7E-36A92A56C71B";
-	setAttr ".rp" -type "double3" 0 0 0.57234477581777021 ;
-	setAttr ".sp" -type "double3" 0 0 0.57234477581777021 ;
-createNode nurbsCurve -n "nurbsCircleShape3" -p "nurbsCircle3";
-	rename -uid "FD9AE4FC-446C-3883-4337-A9A45FA1FBC2";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		2.1600592497687624e-17 0.35276444625057279 0.21958032956719747
-		1.8705163891647551e-33 0.49888426421059456 0.57234477581777021
-		-2.1600592497687624e-17 0.35276444625057274 0.92510922206834301
-		-3.0547850865524365e-17 2.5862248353036572e-17 1.0712290400283648
-		-2.1600592497687624e-17 -0.35276444625057274 0.92510922206834301
-		-3.0599991138314225e-33 -0.49888426421059484 0.57234477581777021
-		2.1600592497687624e-17 -0.35276444625057274 0.21958032956719747
-		3.0547850865524365e-17 -6.8032670965426704e-17 0.073460511607175483
-		2.1600592497687624e-17 0.35276444625057279 0.21958032956719747
-		1.8705163891647551e-33 0.49888426421059456 0.57234477581777021
-		-2.1600592497687624e-17 0.35276444625057274 0.92510922206834301
-		;
-createNode transform -n "nurbsCircle6" -p "group1";
-	rename -uid "F0B7AF85-442F-3507-D66E-33BA917D8096";
-	setAttr ".rp" -type "double3" 0 0 3.633041166268038 ;
-	setAttr ".sp" -type "double3" 0 0 3.633041166268038 ;
-createNode nurbsCurve -n "nurbsCircleShape6" -p "nurbsCircle6";
-	rename -uid "3440D6B8-494F-18C4-328A-C492E9E0679F";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		2.1600592497687624e-17 0.35276444625057279 3.2802767200174654
-		1.8705163891647551e-33 0.49888426421059456 3.633041166268038
-		-2.1600592497687624e-17 0.35276444625057274 3.9858056125186105
-		-3.0547850865524365e-17 2.5862248353036572e-17 4.131925430478633
-		-2.1600592497687624e-17 -0.35276444625057274 3.9858056125186105
-		-3.0599991138314225e-33 -0.49888426421059484 3.633041166268038
-		2.1600592497687624e-17 -0.35276444625057274 3.2802767200174654
-		3.0547850865524365e-17 -6.8032670965426704e-17 3.1341569020574434
-		2.1600592497687624e-17 0.35276444625057279 3.2802767200174654
-		1.8705163891647551e-33 0.49888426421059456 3.633041166268038
-		-2.1600592497687624e-17 0.35276444625057274 3.9858056125186105
+		-1.2163883751087754 0.7836116248912246 0
+		-2 1.1081941875543877 0
+		-2.7836116248912246 0.78361162489122438 0
+		-3.1081941875543881 5.7448982375248304e-17 0
+		-2.7836116248912246 -0.78361162489122449 0
+		-2 -1.1081941875543884 0
+		-1.2163883751087754 -0.78361162489122438 0
+		-0.89180581244561186 -1.511240500779959e-16 0
+		-1.2163883751087754 0.7836116248912246 0
+		-2 1.1081941875543877 0
+		-2.7836116248912246 0.78361162489122438 0
 		;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "79A4AF8D-480B-F85E-76C7-A7B17EC5F0F0";
+	rename -uid "01B101B3-4953-2CE5-782F-CA9399023FAB";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "22753317-4625-C5F0-5CA8-5099C25DF13A";
+	rename -uid "12B674F1-4053-A440-93C3-6A84C5030C7E";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "C5C173F8-4E01-58BC-179C-2CBC22C4DF20";
+	rename -uid "4D9F1436-4920-5E8E-CA04-4DB7E28512DA";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "74D6F662-42E4-7F1F-DB5C-A095B4A102D7";
+	rename -uid "F2191FF1-483F-8212-83F1-9CBE69B78822";
 createNode displayLayer -n "defaultLayer";
-	rename -uid "8A370FE5-4557-5CFE-3E71-A18CFB6760FB";
+	rename -uid "2E524909-4710-D530-86C5-57B10923543D";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "ADB7FD32-4B7A-E709-03ED-599215C44C10";
+	rename -uid "7342ADF5-4398-9B44-72CB-DB85F0686D22";
 createNode renderLayer -n "defaultRenderLayer";
-	rename -uid "6D452F20-40F1-EAFC-CA65-3FBF4E15003A";
+	rename -uid "41B0D445-4FD7-94FE-76AC-A8BB0125E87E";
 	setAttr ".g" yes;
-createNode makeNurbCircle -n "makeNurbCircle1";
-	rename -uid "B2D690DA-43C7-3C27-55DB-E49E86976098";
-	setAttr ".nr" -type "double3" 1 0 0 ;
-createNode makeNurbCircle -n "makeNurbCircle2";
-	rename -uid "C85914EE-4CB7-88AB-B31E-C9B04041234C";
-	setAttr ".nr" -type "double3" 1 0 0 ;
-createNode transformGeometry -n "transformGeometry1";
-	rename -uid "C6258D83-48D6-710D-BAE3-D68782BA71A8";
-	setAttr ".txf" -type "matrix" 0.45017765822392064 0 0 0 0 0.45017765822392064 0 0
-		 0 0 0.45017765822392064 0 0 0 1.8281088558045315 1;
 createNode script -n "uiConfigurationScriptNode";
-	rename -uid "29A454F4-4479-AF3E-8A90-4E8401B032DB";
+	rename -uid "5F63EBA4-41B9-F4B8-DE3C-58B8452F8104";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
@@ -260,7 +206,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
-	rename -uid "8B4D8D15-4A19-6232-C334-41A448762CDF";
+	rename -uid "DDB356C7-4069-426B-CE79-93B4780A3344";
 	setAttr ".b" -type "string" "playbackOptions -min 0 -max 30 -ast 0 -aet 30 ";
 	setAttr ".st" 6;
 select -ne :time1;
@@ -308,14 +254,11 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "transformGeometry1.og" "nurbsCircleShape2.cr";
-connectAttr "makeNurbCircle1.oc" "nurbsCircleShape1.cr";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "makeNurbCircle2.oc" "transformGeometry1.ig";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of finger.ma
+// End of eyes.ma
